@@ -1,5 +1,5 @@
 
-const fs = require ('fs');
+import fs from 'fs';
 
 
 //Class declaration
@@ -51,23 +51,23 @@ class ProductManager {
     }
 }
 
-const ProductManager = new ProductManager('./products.txt', 'title: drum','price: 550','thumbnail: https://cdn3.iconfinder.com/data/icons/vol-3/128/headphones-1024.png','id: 4' )
+const product = new ProductManager('./products.txt', 'title: drum','price: 550','thumbnail: https://cdn3.iconfinder.com/data/icons/vol-3/128/headphones-1024.png','id: 4' )
 
-ProductManager.getAll().then(data=> console.log(data)).catch();
+product.getAll().then(data=> console.log(data)).catch();
 
 const prueba2 = async () => {
     
-     const productos = await ProductManager.getAll()
+     const productos = await product.getAll()
     
-     const respuesta =  await ProductManager.addProduct({ title: 'armonica',price: 250,thumbnail:'https://cdn3.iconfinder.com/data/icons/vol-3/128/headphones-1024.png',id: 2}) 
+     const respuesta =  await product.addProduct({ title: 'armonica',price: 250,thumbnail:'https://cdn3.iconfinder.com/data/icons/vol-3/128/headphones-1024.png',id: 2}) 
      console.log(`El nuevo producto es ${respuesta}`)
     }
 
-    // prueba()
-    prueba2()
+     prueba2()
+    //prueba2()
 
 
-
+export default  { ProductManager}
 
 
 
