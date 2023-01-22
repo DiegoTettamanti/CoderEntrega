@@ -1,0 +1,5 @@
+{
+    "title": "armonica",
+    "price": 250,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/vol-3/128/headphones-1024.png"
+}

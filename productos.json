@@ -1,0 +1,24 @@
+{ "productos":[
+        {
+         
+                "title": "Headphones",
+                "price": 250,
+                "thumbnail": "https://cdn3.iconfinder.com/data/icons/vol-3/128/headphones-1024.png",
+                "id": 1
+        }
+        ,
+         {
+                "title": "Guitar",
+                "price": 450,
+                "thumbnail": "https://cdn3.iconfinder.com/data/icons/vol-3/128/guitar-1024.png",
+                "id": 2
+        },
+        
+         {
+                "title": "Piano",
+                "price": 750,
+                "thumbnail": "https://media.istockphoto.com/photos/keyboard-music-white-picture-id481907373" ,
+                "id": 3
+        } ]
+}
+        
