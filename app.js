@@ -1,5 +1,5 @@
 import  express  from 'express';
-
+import productManager from './productManager.js';
 
 
 const app = express();
@@ -9,17 +9,19 @@ app.get('/query', (req, res) =>
 {
     res.send(req.query)
     console.log("Query sent")
-    const {pruducts, id} = req.query
+    const {pruducts: products, id} = req.query
     res.send({
-        pruducts,
+        products,
         id
     })
 })
 
 
 app.get('/productos', (req, res) => {
-    res.send(`<h1 style="color:red";>Peticiones al servidor</h1>`)})
-    console.log("Probando respuesta del servidor...")
+    res.send('/productos')
+    console.log("Probando respuesta del servidor...")})
+    app.get('/productos/:id', (req, res) => {
+        res.send('/productos.txt')})
 
 app.listen(PORT, err =>{
     if(err){
@@ -27,4 +29,5 @@ app.listen(PORT, err =>{
     }else{`Escuchando en el puerto {PORT} en el servidor`
 }})
 app.get('/params/:products/:id', (req, res) =>
-    console.log(req.params))
+    console.log(product, id))
+
