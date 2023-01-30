@@ -1,4 +1,5 @@
 import  express  from 'express';
+import productManager from './productManager';
 
 
 const app = express();
@@ -51,3 +52,5 @@ app.get('/:id', (req, res) =>{
         product
     )
     })
+
+    
