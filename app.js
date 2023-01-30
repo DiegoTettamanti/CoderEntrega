@@ -39,11 +39,7 @@ app.get('/', (req, res) => {
     app.get('/productos/:id', (req, res) => {
         res.send('/productos.txt')})
 
-app.listen(PORT, err =>{
-    if(err){
-        console.log(err)
-    }else{`Escuchando en el puerto {PORT} en el servidor`
-}})
+
 app.get('/:id', (req, res) =>{
     const { id } = req.params
     const product = products.find(product => product.id === id)
@@ -53,4 +49,8 @@ app.get('/:id', (req, res) =>{
     )
     })
 
-    
+    app.listen(PORT, err =>{
+        if(err){
+            console.log(err)
+        }else{`Escuchando en el puerto {PORT} en el servidor`
+    }})

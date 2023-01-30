@@ -3,7 +3,7 @@ import fs from 'fs';
 
 
 //Class declaration
-class ProductManager {
+export class ProductManager {
     constructor(path){
     this.path = path
  
