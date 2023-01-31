@@ -1,5 +1,5 @@
 import  express  from 'express';
-import productManager from './productManager';
+
 
 
 const app = express();
@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
         res.send('/productos.txt')})
 
 
-app.get('/:id', (req, res) =>{
+app.get('/api/:id', (req, res) =>{
     const { id } = req.params
     const product = products.find(product => product.id === id)
     if(!product) return res.send("product not found")
@@ -48,6 +48,23 @@ app.get('/:id', (req, res) =>{
         product
     )
     })
+
+app.get('/params/:title/:id', (req, res) => {
+    console.log(req.params);
+    const {title,id} = req.params;
+    res.send({title, id})
+})
+
+
+app.get('/query', (req, res) => {
+    const { title, price, id } = req.query
+    res.send({
+        title,
+        price,
+        id
+    })
+})
+
 
     app.listen(PORT, err =>{
         if(err){
