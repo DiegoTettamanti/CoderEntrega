@@ -14,7 +14,7 @@ export class ProductManager {
                 const file = await fs.promises.readFile(this.path);
 
                 const archivoConvertido = JSON.parse(file)
-                const products = file
+                const product = file
 
                  return archivoConvertido
 

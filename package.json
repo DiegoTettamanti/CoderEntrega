@@ -16,5 +16,8 @@
   "keywords": [],
   "author": "Diego Tettamanti",
   "license": "ISC",
-  "description": "clase3"
+  "description": "",
+  "devDependencies": {
+    "hint": "^7.1.3"
+  }
 }
